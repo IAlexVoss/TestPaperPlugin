@@ -1,181 +1,205 @@
-# TestPaperPlugin - Шаблон плагина для PaperMC 1.21.8
+# TestPaperPlugin - Template Plugin for PaperMC 1.21.8
 
 [![Gradle](https://img.shields.io/badge/Gradle-8.14.1-brightgreen.svg)](https://gradle.org)
+
 [![Paper](https://img.shields.io/badge/Paper-1.21.8-blue.svg)](https://papermc.io)
+
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.java.net)
 
-Шаблонный проект для разработки плагинов Minecraft на PaperMC с использованием Paperweight UserDev.  
-Проект настроен для быстрого старта разработки с поддержкой современных инструментов.
+Template project for developing **Minecraft** plugins on **PaperMC** using **paperweight-userdev**.
 
-## 🚀 Особенности
+Pre-configured environment for rapid plugin development with modern tooling support.
 
-- Полностью настроенная среда для Paper 1.21.8
-- Использование Paperweight UserDev для упрощения разработки
-- Поддержка Gradle 8.14.1
-- Автоматическая генерация plugin.yml
-- Готовые задачи Gradle для запуска тестового сервера
+## 🚀 Features
 
-## 📂 Структура проекта
+- Fully configured environment for **`Paper 1.21.8`**
+- **paperweight-userdev** for simplified development
+- **Gradle 8.14.1** support
+- Automatic **plugin.yml** generation
+- Ready-to-use **Gradle** tasks for test server
+
+## 📂 Project Structure
 
 TestPaperPlugin/
-├── .gradle/ # Кэш Gradle (автогенерируется)
-├── build/ # Собранные артефакты (автогенерируется)
-├── src/
-│ ├── main/
-│ │ ├── java/ # Исходные коды плагина
-│ │ └── resources/ # Ресурсы плагина (config.yml, lang и т.д.)
-│ └── test/ # Тесты (необязательно)
-├── gradle/ # Файлы обертки Gradle
-├── .gitignore # Игнорируемые файлы
-├── build.gradle.kts # Конфигурация сборки (главный файл)
-├── gradle.properties # Свойства Gradle
-├── gradlew # Gradle wrapper (Linux/Mac)
-├── gradlew.bat # Gradle wrapper (Windows)
+├── .gradle/ # Кэш Gradle (автогенерируется)  
+├── build/ # Собранные артефакты (автогенерируется)  
+├── src/  
+│ ├── main/  
+│ │ ├── java/ # Исходные коды плагина  
+│ │ └── resources/ # Ресурсы плагина (config.yml, lang и т.д.)  
+│ └── test/ # Тесты (необязательно)  
+├── gradle/ # Файлы обертки Gradle  
+├── .gitignore # Игнорируемые файлы  
+├── build.gradle.kts # Конфигурация сборки (главный файл)  
+├── gradle.properties # Свойства Gradle  
+├── gradlew # Gradle wrapper (Linux/Mac)  
+├── gradlew.bat # Gradle wrapper (Windows)  
 └── settings.gradle.kts # Настройки проекта
 
-### Ключевые файлы конфигурации
+### Key Configuration Files
 
-1. **`build.gradle.kts`** - основной файл конфигурации:
+1.  **`build.gradle.kts`** - main configuration file:
 
-   - Зависимости (Paper API, библиотеки)
-   - Настройки плагина (версия, авторы)
-   - Задачи Gradle (сборка, запуск сервера)
-   - Конфигурация генерации `plugin.yml`
+    - Dependencies (Paper API, libraries)
+    - Plugin settings (version, authors)
+    - Gradle tasks (build, run server)
+    - `plugin.yml` generation config
 
-2. **`settings.gradle.kts`** - настройки проекта:
+2.  **`settings.gradle.kts`** - project settings:
 
-   - Имя проекта
-   - Управление плагинами
-   - Настройки репозиториев
+    - Project name
+    - Plugin management
+    - Repository settings
 
-3. **`generated-resources/main/plugin.yml`** - автоматически генерируемый файл описания плагина (не редактировать вручную)
+3.  **`generated-resources/main/plugin.yml`** - auto-generated plugin descriptor (do not edit manually)
 
 ## ⚙️ Настройка в различных IDE
 
 ### IntelliJ IDEA
 
-1. Клонируйте репозиторий:
+1. Clone repository:
 
-   ```bash
-   git clone https://github.com/IAlexVoss/TestPaperPlugin.git
+```bash
+	git clone https://github.com/IAlexVoss/TestPaperPlugin.git
+```
 
-   ```
+2. Open project in IntelliJ IDEA
 
-2. Откройте проект в IntelliJ IDEA
+3. Wait for Gradle project import and indexing
 
-3. Дождитесь индексации и импорта Gradle проекта
+4. To run:
 
-4. Для запуска:
-
-   - Откройте панель Gradle (справа)
-   - Разверните Tasks → run-paper
-   - Дважды кликните на runServer
+   - Open Gradle panel (right sidebar)
+   - Expand Tasks → run-paper
+   - Double-click runServer
 
 ### Eclipse
 
-1. Установите плагин Buildship (Gradle integration)
+1. Install **Buildship** plugin (Gradle integration)
 
-2. Импортируйте проект:
+2. Import project:
 
    - File → Import → Gradle → Existing Gradle Project
-   - Укажите папку проекта
+   - Select project folder
 
-3. После импорта создайте конфигурацию запуска:
+3. Create run configuration:
 
    - Run → Run Configurations...
    - Gradle Task → New
    - Project: TestPaperPlugin
    - Tasks: runServer
 
-4. Сохраните и запустите
+4. Save and run
 
 ### Visual Studio Code
 
-1. Установите расширения:
+1. Install extensions:
 
-   - Java Extension Pack
-   - Gradle for Java
+   - **Java Extension Pack**
+   - **Gradle for Java**
 
-2. Откройте папку проекта
+2. Open project folder
 
-3. При запросе разрешения на импорт Gradle проекта - согласитесь
+3. Allow Gradle project import when prompted
 
-4. Для запуска:
+4. To run:
 
-   - Откройте панель Gradle (иконка слона)
-   - Разверните проект → Tasks → run-paper
-   - Кликните на runServer
+   - Open Gradle panel (elephant icon)
+   - Expand project → Tasks → run-paper
+   - Click runServer
 
-## 🛠️ Команды Gradle
+## 🛠️ Gradle Commands
 
-### Основные команды
+### Basic Commands
 
-    ```bash
-    # Запустить тестовый сервер
-    ./gradlew runServer
+```bash
 
-    # Собрать JAR-файл плагина
-    ./gradlew build
+	# Start test server
+	./gradlew  runServer
 
-    # Очистить проект
-    ./gradlew clean
 
-    # Обновить зависимости
-    ./gradlew --refresh-dependencies
-    ```
+	# Build plugin JAR
+	./gradlew  build
 
-### Полезные задачи
 
-    ```bash
-    # Запустить сервер с отладочным режимом
-    ./gradlew runServer --debug-jvm
+	# Clean project
+	./gradlew  clean
 
-    # Перегенерировать plugin.yml
-    ./gradlew generateBukkitPluginYaml
 
-    # Показать все доступные задачи
-    ./gradlew tasks
-    ```
+	# Refresh dependencies
+	./gradlew  --refresh-dependencies
 
-## ⚙️ Настройка плагина
+```
 
-Конфигурация плагина в build.gradle.kts:
+### Useful Tasks
 
-    ```java
-    bukkitPluginYaml {
-    main = "io.papermc.paperweight.testplugin.TestPlugin" // Главный класс
-    load = BukkitPluginYaml.PluginLoadOrder.STARTUP       // Время загрузки
-    authors.add("Author")                                 // Авторы
-    apiVersion = "1.21"                                   // Версия API
-    // Дополнительные параметры:
-    // commands { ... }
-    // permissions { ... }
-    // depend = listOf("Vault")
-    }
-    ```
+```bash
 
-## 🔧 Решение проблем
+	# Start server in debug mode
+	./gradlew  runServer  --debug-jvm
 
-### Ошибки сборки
 
-    ```bash
-    # Очистите проект и обновите зависимости
-    ./gradlew clean --refresh-dependencies
+	# Regenerate plugin.yml
+	./gradlew  generateBukkitPluginYaml
 
-    # Удалите кэш Gradle
-    rm -rf ~/.gradle/caches
-    ```
 
-### Распространенные ошибки
+	# Show all available tasks
+	./gradlew  tasks
 
-1. **`Duplicate plugin.yml:`**
+```
 
-   - Убедитесь, что в src/main/resources нет файла plugin.yml
+## ⚙️ Plugin Configuration
 
-2. **`Paperweight version issues:`**
+Plugin settings in **`build.gradle.kts`**:
 
-   - Проверьте совместимость версий в build.gradle.kts
+```java
 
-## 📝 Лицензия
+	bukkitPluginYaml {
+	main = "io.papermc.paperweight.testplugin.TestPlugin"  // Main class
+	load = BukkitPluginYaml.PluginLoadOrder.STARTUP        // Load order
+	authors.add("Author")                                  // Authors
+	apiVersion = "1.21"                                    // API version
 
-Этот проект распространяется под лицензией MIT. Вы можете свободно использовать его в качестве основы для своих плагинов.
+	// Additional parameters:
+	// commands { ... }
+	// permissions { ... }
+	// depend = listOf("Vault")
+
+	}
+
+```
+
+## 🔧 Troubleshooting
+
+### Build Errors
+
+```bash
+
+	# Clean project and refresh dependencies
+	./gradlew  clean  --refresh-dependencies
+
+
+	# Delete Gradle cache
+	rm  -rf  ~/.gradle/caches
+
+```
+
+### Common Issues
+
+1.  **`Duplicate plugin.yml:`**
+
+- Ensure there's no `plugin.yml` in `src/main/resources`
+
+2.  **`Paperweight version issues:`**
+
+- Verify version compatibility in `build.gradle.kts`
+
+## 📝 License
+
+This project is licensed under MIT. Feel free to use it as a base for your plugins.
+
+<details> <summary><b>🇷🇺 Русская версия</b></summary>
+
+[Читать на русском](README.ru.md)
+
+</details>
