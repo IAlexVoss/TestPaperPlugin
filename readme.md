@@ -60,7 +60,7 @@ TestPaperPlugin/
 1. Clone repository:
 
 ```bash
-	git clone https://github.com/IAlexVoss/TestPaperPlugin.git
+git clone https://github.com/IAlexVoss/TestPaperPlugin.git
 ```
 
 2. Open project in IntelliJ IDEA
@@ -112,40 +112,48 @@ TestPaperPlugin/
 
 ### Basic Commands
 
+- Start test server:
+
 ```bash
+./gradlew  runServer
+```
 
-	# Start test server
-	./gradlew  runServer
+- Build plugin JAR:
 
+```bash
+./gradlew  build
+```
 
-	# Build plugin JAR
-	./gradlew  build
+- Clean project:
 
+```bash
+./gradlew  clean
+```
 
-	# Clean project
-	./gradlew  clean
+- Refresh dependencies:
 
-
-	# Refresh dependencies
-	./gradlew  --refresh-dependencies
-
+```bash
+./gradlew  --refresh-dependencies
 ```
 
 ### Useful Tasks
 
+- Start server in debug mode:
+
 ```bash
+./gradlew  runServer  --debug-jvm
+```
 
-	# Start server in debug mode
-	./gradlew  runServer  --debug-jvm
+- Regenerate `plugin.yml`:
 
+```bash
+./gradlew  generateBukkitPluginYaml
+```
 
-	# Regenerate plugin.yml
-	./gradlew  generateBukkitPluginYaml
+- Show all available tasks:
 
-
-	# Show all available tasks
-	./gradlew  tasks
-
+```bash
+./gradlew  tasks
 ```
 
 ## ⚙️ Plugin Configuration
@@ -153,35 +161,34 @@ TestPaperPlugin/
 Plugin settings in **`build.gradle.kts`**:
 
 ```java
+bukkitPluginYaml {
+main = "io.papermc.paperweight.testplugin.TestPlugin"  // Main class
+load = BukkitPluginYaml.PluginLoadOrder.STARTUP        // Load order
+authors.add("Author")                                  // Authors
+apiVersion = "1.21"                                    // API version
 
-	bukkitPluginYaml {
-	main = "io.papermc.paperweight.testplugin.TestPlugin"  // Main class
-	load = BukkitPluginYaml.PluginLoadOrder.STARTUP        // Load order
-	authors.add("Author")                                  // Authors
-	apiVersion = "1.21"                                    // API version
+// Additional parameters:
+// commands { ... }
+// permissions { ... }
+// depend = listOf("Vault")
 
-	// Additional parameters:
-	// commands { ... }
-	// permissions { ... }
-	// depend = listOf("Vault")
-
-	}
-
+}
 ```
 
 ## 🔧 Troubleshooting
 
 ### Build Errors
 
+- Clean project and refresh dependencies:
+
 ```bash
+./gradlew  clean  --refresh-dependencies
+```
 
-	# Clean project and refresh dependencies
-	./gradlew  clean  --refresh-dependencies
+- Delete Gradle cache:
 
-
-	# Delete Gradle cache
-	rm  -rf  ~/.gradle/caches
-
+```bash
+rm  -rf  ~/.gradle/caches
 ```
 
 ### Common Issues
