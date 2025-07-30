@@ -53,7 +53,7 @@ TestPaperPlugin/
 
 3.  **`generated-resources/main/plugin.yml`** - auto-generated plugin descriptor (do not edit manually)
 
-## ⚙️ Настройка в различных IDE
+## ⚙️ IDE Setup
 
 ### IntelliJ IDEA
 
