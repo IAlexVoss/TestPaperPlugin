@@ -207,6 +207,6 @@ This project is licensed under MIT. Feel free to use it as a base for your plugi
 
 <details> <summary><b>🇷🇺 Русская версия</b></summary>
 
-[Читать на русском](README.ru.md)
+[Читать на русском](readme.ru.md)
 
 </details>

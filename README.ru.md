@@ -207,6 +207,6 @@ rm  -rf  ~/.gradle/caches
 
 <details><summary><b>🇬🇧 English version</b></summary>
 
-[Read in English](README.md)
+[Read in English](readme.md)
 
 </details>
