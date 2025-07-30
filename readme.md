@@ -21,12 +21,12 @@ Pre-configured environment for rapid plugin development with modern tooling supp
 ## 📂 Project Structure
 
 TestPaperPlugin/  
-├── .gradle/ # Кэш Gradle (auto-generated)  
-├── build/ # Собранные артефакты (auto-generated)  
+├── .gradle/ # Gradle cache (auto-generated)  
+├── build/ # Build artifacts (auto-generated)  
 ├── src/  
 │ ├── main/  
 │ │ ├── java/ # Plugin source code  
-│ │ └── resources/ # Ресурсы плагина (config.yml, lang, etc.)  
+│ │ └── resources/ # Plugin resources (config.yml, lang, etc.)  
 │ └── test/ # Tests (optional)  
 ├── gradle/ # Gradle wrapper files  
 ├── .gitignore # Ignored files  
