@@ -20,7 +20,7 @@ Pre-configured environment for rapid plugin development with modern tooling supp
 
 ## 📂 Project Structure
 
-TestPaperPlugin/
+TestPaperPlugin/  
 ├── .gradle/ # Кэш Gradle (автогенерируется)  
 ├── build/ # Собранные артефакты (автогенерируется)  
 ├── src/  
