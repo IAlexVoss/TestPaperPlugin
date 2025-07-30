@@ -21,20 +21,20 @@ Pre-configured environment for rapid plugin development with modern tooling supp
 ## 📂 Project Structure
 
 TestPaperPlugin/  
-├── .gradle/ # Кэш Gradle (автогенерируется)  
-├── build/ # Собранные артефакты (автогенерируется)  
+├── .gradle/ # Кэш Gradle (auto-generated)  
+├── build/ # Собранные артефакты (auto-generated)  
 ├── src/  
 │ ├── main/  
-│ │ ├── java/ # Исходные коды плагина  
-│ │ └── resources/ # Ресурсы плагина (config.yml, lang и т.д.)  
-│ └── test/ # Тесты (необязательно)  
-├── gradle/ # Файлы обертки Gradle  
-├── .gitignore # Игнорируемые файлы  
-├── build.gradle.kts # Конфигурация сборки (главный файл)  
-├── gradle.properties # Свойства Gradle  
+│ │ ├── java/ # Plugin source code  
+│ │ └── resources/ # Ресурсы плагина (config.yml, lang, etc.)  
+│ └── test/ # Tests (optional)  
+├── gradle/ # Gradle wrapper files  
+├── .gitignore # Ignored files  
+├── build.gradle.kts # Build configuration (main file)  
+├── gradle.properties # Gradle properties  
 ├── gradlew # Gradle wrapper (Linux/Mac)  
 ├── gradlew.bat # Gradle wrapper (Windows)  
-└── settings.gradle.kts # Настройки проекта
+└── settings.gradle.kts # Project settings
 
 ### Key Configuration Files
 
